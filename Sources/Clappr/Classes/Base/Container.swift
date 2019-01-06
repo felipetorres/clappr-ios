@@ -47,7 +47,9 @@ open class Container: UIObject {
         trigger(Event.willLoadSource.rawValue)
 
         options[kSourceUrl] = source
-        options[kMimeType] = mimeType
+        if let mimeType = mimeType {
+            options[kMimeType] = mimeType
+        }
 
         playback?.destroy()
 
