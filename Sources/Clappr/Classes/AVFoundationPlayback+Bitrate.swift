@@ -16,6 +16,14 @@ extension AVFoundationPlayback {
         }
         return nil
     }
+    
+    public func speed(_ speed: Float) {
+        player?.rate = speed
+    }
+    
+    public func speed() -> Float? {
+        return player?.rate
+    }
 
     private func lastLogEvent() -> AVPlayerItemAccessLogEvent? {
         return player?.currentItem?.accessLog()?.events.last
