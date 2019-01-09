@@ -5,7 +5,10 @@ protocol SeekbarDelegate: NSObjectProtocol {
 
 }
 
-class SeekbarView: UIView {
+public class SeekbarView: UIView {
+    public var progressColor: UIColor! = .blue
+    public var bufferColor: UIColor! = .gray
+    
     @IBOutlet weak var seekBarContainerView: DragDetectorView! {
         didSet {
             seekBarContainerView.target = self
@@ -47,7 +50,7 @@ class SeekbarView: UIView {
 
     weak var delegate: SeekbarDelegate?
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         isLive ? putScrubberAtTheEnd() : repositionUIElements()
         previousSeekbarWidth = seekBarContainerView.frame.width
@@ -172,11 +175,11 @@ class SeekbarView: UIView {
     }
 
     private func setupVODStyle() {
-        progressBar.backgroundColor = .blue
+        progressBar.backgroundColor = progressColor
         timeLabelView.isHidden = false
         timeLabel.isHidden = false
         bufferBar.isHidden = false
-        bufferBar.backgroundColor = .gray
+        bufferBar.backgroundColor = bufferColor
         isUserInteractionEnabled = true
     }
 }

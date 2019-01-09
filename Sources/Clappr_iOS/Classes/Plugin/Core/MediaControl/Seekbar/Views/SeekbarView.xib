@@ -35,12 +35,12 @@
                             </constraints>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGN-FD-fyI" userLabel="Progress Bar">
-                            <rect key="frame" x="0.0" y="18" width="0.0" height="1"/>
+                            <rect key="frame" x="0.0" y="17.5" width="0.0" height="2"/>
                             <color key="backgroundColor" red="0.0" green="0.35294117650000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <accessibility key="accessibilityConfiguration" label="seek bar"/>
                             <constraints>
                                 <constraint firstAttribute="width" id="8LN-fb-yw9"/>
-                                <constraint firstAttribute="height" constant="1" id="9lZ-R3-oqx"/>
+                                <constraint firstAttribute="height" constant="2" id="9lZ-R3-oqx"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvE-Ry-POo" userLabel="Scrubber">

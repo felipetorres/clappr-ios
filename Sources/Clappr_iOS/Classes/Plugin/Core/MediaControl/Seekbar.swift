@@ -1,18 +1,18 @@
-class Seekbar: MediaControlPlugin {
+open class Seekbar: MediaControlPlugin {
 
-    override var pluginName: String {
+    override open var pluginName: String {
         return "Seekbar"
     }
 
-    override var panel: MediaControlPanel {
+    override open var panel: MediaControlPanel {
         return .bottom
     }
 
-    override var position: MediaControlPosition {
+    override open var position: MediaControlPosition {
         return .none
     }
 
-    var seekbarView: SeekbarView = .fromNib()
+    public var seekbarView: SeekbarView = .fromNib()
 
     var containerView: UIStackView! {
         didSet {
@@ -23,12 +23,12 @@ class Seekbar: MediaControlPlugin {
 
     private var isOfflinePlayback: Bool = false
 
-    required init(context: UIObject) {
+    required public init(context: UIObject) {
         super.init(context: context)
         bindEvents()
     }
 
-    required init() {
+    required public init() {
         super.init()
     }
 
@@ -106,7 +106,7 @@ class Seekbar: MediaControlPlugin {
         seekbarView.updateBuffer(time: maxBufferTime)
     }
 
-    override func render() {
+    override open func render() {
         setupHeightSize()
         containerView = UIStackView()
         containerView.addArrangedSubview(seekbarView)
