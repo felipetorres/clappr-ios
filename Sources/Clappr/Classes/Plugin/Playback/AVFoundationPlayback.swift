@@ -318,6 +318,14 @@ open class AVFoundationPlayback: Playback {
         player = nil
     }
 
+    @objc public func removePlayerFromLayer() {
+        playerLayer?.player = nil
+    }
+
+    @objc public func restorePlayerOnLayer() {
+        playerLayer?.player = player
+    }
+
     @objc var isReadyToSeek: Bool {
         return player?.currentItem?.status == .readyToPlay
     }
