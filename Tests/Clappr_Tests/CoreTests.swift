@@ -743,7 +743,7 @@ class CorePluginMock: UICorePlugin {
             codeThatCrashes()
         }
     }
-
+    
 
     override func destroy() {
         CorePluginMock.didCallDestroy = true
