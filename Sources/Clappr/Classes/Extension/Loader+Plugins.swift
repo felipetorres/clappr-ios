@@ -1,6 +1,4 @@
-@testable import Clappr
-
-extension Loader {
+public extension Loader {
 
     func resetPlugins() {
         Loader.shared.plugins = []

@@ -118,6 +118,7 @@
 		48D81F1D21F9F41200B2D52E /* DoubleTapCorePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D81F1C21F9F41200B2D52E /* DoubleTapCorePlugin.swift */; };
 		48D81F1F21FA31FA00B2D52E /* DoubleTapCorePluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D81F1E21FA31FA00B2D52E /* DoubleTapCorePluginTests.swift */; };
 		55EA991821DD372A006DE981 /* AVFoundationPlayback+Bitrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EA991721DD372A006DE981 /* AVFoundationPlayback+Bitrate.swift */; };
+		55EFD42025812C850040D7E5 /* Loader+Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6A3E32163EEAE0083C9CC /* Loader+Plugins.swift */; };
 		571B7B252174DBDD005C0942 /* AVFoundationPlayback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D362B31D41339400CCB866 /* AVFoundationPlayback.swift */; };
 		571B7B262174E324005C0942 /* AVFoundationPlayback+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7785B6200523E400EC879F /* AVFoundationPlayback+tvOS.swift */; };
 		571B7B292175013F005C0942 /* AVFoundationPlaybackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9684B6C81D186E2D00D012C2 /* AVFoundationPlaybackTests.swift */; };
@@ -268,14 +269,12 @@
 		E7D0BD17218A389B00F5FDF2 /* SeekbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D0BD16218A389B00F5FDF2 /* SeekbarTests.swift */; };
 		EDF652221D467CCA00627C48 /* UICorePluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF652211D467CCA00627C48 /* UICorePluginTests.swift */; };
 		EDF652241D46829100627C48 /* UIContainerPluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF652231D46829100627C48 /* UIContainerPluginTests.swift */; };
-		FB0A223C2175492E00D2180F /* Loader+Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6A3E32163EEAE0083C9CC /* Loader+Plugins.swift */; };
 		FB0A223F21754CBD00D2180F /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0A223D21754C1700D2180F /* PlayerTests.swift */; };
 		FB3A8F1A209F8D7000CEFC3D /* FullscreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61A3F2209F885800BDF267 /* FullscreenTests.swift */; };
 		FB46260121AC8D2B008D9A25 /* CoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB46260021AC8D2B008D9A25 /* CoreFactory.swift */; };
 		FBD47AAD21AD6733003265AF /* CoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB46260021AC8D2B008D9A25 /* CoreFactory.swift */; };
 		FBD47AAF21AD6856003265AF /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD47AAE21AD6856003265AF /* ContainerFactory.swift */; };
 		FBD47AB021AD6856003265AF /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD47AAE21AD6856003265AF /* ContainerFactory.swift */; };
-		FBE6A3E42163EEAE0083C9CC /* Loader+Plugins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6A3E32163EEAE0083C9CC /* Loader+Plugins.swift */; };
 		FC6418DE2007DB9100E81B7C /* ClapprDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6418DD2007DB9100E81B7C /* ClapprDateFormatter.swift */; };
 		FC6418E12007DC2F00E81B7C /* ClapprDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6418DB2007DA6200E81B7C /* ClapprDateFormatterTests.swift */; };
 		FC7785AE2005233D00EC879F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC77859E2005233D00EC879F /* Player.swift */; };
@@ -935,6 +934,7 @@
 				55EA991721DD372A006DE981 /* AVFoundationPlayback+Bitrate.swift */,
 				48563228220B47B10096CDAE /* Core+Ext.swift */,
 				C92747E6220DD4E0009465A7 /* UIImageView+Ext.swift */,
+				FBE6A3E32163EEAE0083C9CC /* Loader+Plugins.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1304,7 +1304,6 @@
 		FBE6A3E52163EF9C0083C9CC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FBE6A3E32163EEAE0083C9CC /* Loader+Plugins.swift */,
 				C93212462212013700F0C47B /* UIImageViewTests.swift */,
 			);
 			path = Extensions;
@@ -1882,7 +1881,6 @@
 				32A7A298215EA49700296DE3 /* NoOpPlaybackTests.swift in Sources */,
 				FB0A223F21754CBD00D2180F /* PlayerTests.swift in Sources */,
 				C94D8CEE221B1E5400C7855D /* ContainerPluginTests.swift in Sources */,
-				FB0A223C2175492E00D2180F /* Loader+Plugins.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1914,7 +1912,6 @@
 				C9EDF8482162C98D00789E2F /* MediaControlPluginTests.swift in Sources */,
 				5733D1BE21BAA6E4002107D2 /* Dictionary+startAtTests.swift in Sources */,
 				96912C3E1C21A1AF003A4AFD /* PosterPluginTests.swift in Sources */,
-				FBE6A3E42163EEAE0083C9CC /* Loader+Plugins.swift in Sources */,
 				322EA4CA20F941300018973A /* AVURLAssetStub.swift in Sources */,
 				C93212472212013700F0C47B /* UIImageViewTests.swift in Sources */,
 				9EED97062088E48700D1C84A /* AVPlayerStub.swift in Sources */,
@@ -1959,6 +1956,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D362CE1D41339400CCB866 /* Player.swift in Sources */,
+				55EFD42025812C850040D7E5 /* Loader+Plugins.swift in Sources */,
 				4822B6AF220C72AE00D1C134 /* SeekBubble.swift in Sources */,
 				C94D8CF0221B22C300C7855D /* ContainerPlugin.swift in Sources */,
 				57F1354921836EE000111BC6 /* Array+appendOrReplace.swift in Sources */,
