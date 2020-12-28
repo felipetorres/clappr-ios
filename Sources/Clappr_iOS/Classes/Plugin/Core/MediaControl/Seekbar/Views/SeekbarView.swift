@@ -10,6 +10,8 @@ public class SeekbarView: UIView {
     public var bufferColor: UIColor! = .gray
     public var scrubberColor: UIColor! = .white
     
+    public var hasTimeLabel = true
+    
     @IBOutlet weak var seekBarContainerView: DragDetectorView! {
         didSet {
             seekBarContainerView.target = self
@@ -105,7 +107,7 @@ public class SeekbarView: UIView {
     
     func moveTimeLabel(relativeTo horizontalTouchPoint: CGFloat, state: DragDetectorView.State) {
         if state == .moved {
-            timeLabelView.isHidden = false
+            timeLabelView.isHidden = !hasTimeLabel
             let halfTimeLabelView: CGFloat = timeLabelView.frame.width / 2
 
             var position = horizontalTouchPoint - halfTimeLabelView
@@ -181,7 +183,7 @@ public class SeekbarView: UIView {
 
     private func setupVODStyle() {
         progressBar.backgroundColor = progressColor
-        timeLabelView.isHidden = false
+        timeLabelView.isHidden = !hasTimeLabel
         timeLabel.isHidden = false
         bufferBar.isHidden = false
         scrubberInnerCircle?.backgroundColor = scrubberColor
