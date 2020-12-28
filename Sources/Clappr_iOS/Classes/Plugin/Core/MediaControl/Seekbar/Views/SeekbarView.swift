@@ -8,6 +8,7 @@ protocol SeekbarDelegate: NSObjectProtocol {
 public class SeekbarView: UIView {
     public var progressColor: UIColor! = .blue
     public var bufferColor: UIColor! = .gray
+    public var scrubberColor: UIColor! = .white
     
     @IBOutlet weak var seekBarContainerView: DragDetectorView! {
         didSet {
@@ -22,6 +23,9 @@ public class SeekbarView: UIView {
         }
     }
     @IBOutlet weak var scrubberOuterCircle: UIView?
+
+    @IBOutlet weak var scrubberInnerCircle: UIView?
+    
     @IBOutlet weak var bufferBar: UIView!
     @IBOutlet weak var progressBar: UIView!
     @IBOutlet weak var timeLabelView: UIView! {
@@ -166,6 +170,7 @@ public class SeekbarView: UIView {
         timeLabelView.isHidden = true
         timeLabel.isHidden = true
         putScrubberAtTheEnd()
+        scrubberInnerCircle?.backgroundColor = .red
         isUserInteractionEnabled = false
     }
 
@@ -179,6 +184,7 @@ public class SeekbarView: UIView {
         timeLabelView.isHidden = false
         timeLabel.isHidden = false
         bufferBar.isHidden = false
+        scrubberInnerCircle?.backgroundColor = scrubberColor
         bufferBar.backgroundColor = bufferColor
         isUserInteractionEnabled = true
     }
