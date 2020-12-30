@@ -49,6 +49,10 @@ open class MediaControl: UICorePlugin, UIGestureRecognizerDelegate {
         bindContainerEvents()
         bindPlaybackEvents()
     }
+    
+    public var contrastView: UIView? {
+        mediaControlView.contrastView
+    }
 
     open func bindCoreEvents() {
         if let core = self.core {
@@ -210,9 +214,8 @@ open class MediaControl: UICorePlugin, UIGestureRecognizerDelegate {
         
         view.isHidden = true
         view.backgroundColor = UIColor.clear
-        if let constrastView = mediaControlView.contrastView {
-            constrastView.backgroundColor = UIColor.clapprBlack60Color()
-        }
+
+        contrastView?.backgroundColor = UIColor.clapprBlack60Color()
 
         showIfAlwaysVisible()
         view.bindFrameToSuperviewBounds()
