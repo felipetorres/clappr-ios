@@ -180,12 +180,18 @@ public class SeekbarView: UIView {
         scrubberPosition.constant = seekBarContainerView.frame.width - scrubber.frame.width / 2
         progressBarWidthConstraint?.constant = seekBarContainerView.frame.width
     }
+    
+    private func putScrubberAtTheBeginning() {
+        scrubberPosition.constant = -(scrubber.frame.width / 2)
+        progressBarWidthConstraint?.constant = 0
+    }
 
     private func setupVODStyle() {
         progressBar.backgroundColor = progressColor
         timeLabelView.isHidden = !hasTimeLabel
         timeLabel.isHidden = false
         bufferBar.isHidden = false
+        putScrubberAtTheBeginning()
         scrubberInnerCircle?.backgroundColor = scrubberColor
         bufferBar.backgroundColor = bufferColor
         isUserInteractionEnabled = true
